@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v2.2": []
+  },
+  "packageFolders": {
+    "C:\\Users\\MU-RuzeriE\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\visual2017WSP_NEW\\TDD_ATMControl\\ATMConsole\\ATMConsole.csproj",
+      "projectName": "ATMConsole",
+      "projectPath": "D:\\visual2017WSP_NEW\\TDD_ATMControl\\ATMConsole\\ATMConsole.csproj",
+      "packagesPath": "C:\\Users\\MU-RuzeriE\\.nuget\\packages\\",
+      "outputPath": "D:\\visual2017WSP_NEW\\TDD_ATMControl\\ATMConsole\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\MU-RuzeriE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp2.2"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "netcoreapp2.2": {}
+    }
+  }
+}
