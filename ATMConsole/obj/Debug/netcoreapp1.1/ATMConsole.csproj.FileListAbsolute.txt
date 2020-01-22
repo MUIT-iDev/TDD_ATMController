@@ -1,0 +1,11 @@
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\bin\Debug\netcoreapp1.1\ATMConsole.deps.json
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\bin\Debug\netcoreapp1.1\ATMConsole.runtimeconfig.json
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\bin\Debug\netcoreapp1.1\ATMConsole.runtimeconfig.dev.json
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\bin\Debug\netcoreapp1.1\ATMConsole.dll
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\bin\Debug\netcoreapp1.1\ATMConsole.pdb
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.csprojAssemblyReference.cache
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.csproj.CoreCompileInputs.cache
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.AssemblyInfoInputs.cache
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.AssemblyInfo.cs
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.dll
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsole\obj\Debug\netcoreapp1.1\ATMConsole.pdb
