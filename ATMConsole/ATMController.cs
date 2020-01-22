@@ -6,17 +6,15 @@ namespace ATMConsole
 {
     public class ATMController
     {
-        public double Money { get; set; } = 500;
+        public double Money { get; private set; } = 500;
 
         public bool WithDraw(string username, double amount)
         {
-            if (Money >= amount)
-            {
-                Money -= amount;
-                return true;
-            }
+            var isWithdrawRequestValid = Money >= amount;
+            if (!isWithdrawRequestValid) return false;
 
-            return false;
+            Money -= amount;
+            return isWithdrawRequestValid;
         }
 
     }
