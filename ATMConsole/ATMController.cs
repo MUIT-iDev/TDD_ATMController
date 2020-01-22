@@ -7,7 +7,7 @@ namespace ATMConsole
     public class ATMController
     {
         public bool WithDraw(string username, double amount) {
-            throw new NotImplementedException();
+            return true;
         }
 
     }
