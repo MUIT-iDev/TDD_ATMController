@@ -12,5 +12,13 @@ namespace ATMConsoleTest
             var result = atm.WithDraw("john", 500);
             Assert.True(result);
         }
+
+        [Fact(DisplayName = "ผู้ใช้กดเงินออกจากตู้ แต่เงินในบัญชีไม่พอ ระบบทำการแจ้งเตือน")]
+        public void Test2()
+        {
+            var atm = new ATMConsole.ATMController();
+            var result = atm.WithDraw("john", 1000);
+            Assert.False(result);
+        }
     }
 }
