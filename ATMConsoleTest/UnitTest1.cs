@@ -5,15 +5,14 @@ namespace ATMConsoleTest
 {
     public class UnitTest1
     {
-        [Fact(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลถูกต้อง ระบบทำการหักเงินแล้วนำเงินออกมา")]
-        public void Test1()
+        [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลถูกต้อง ระบบทำการหักเงินแล้วนำเงินออกมา")]
+        [InlineData("john", 500, 0)]
+        public void Test1(string username, double withdrawAmount, double expectedMoney)
         {
             //sut = System Under Test
             var sut = new ATMConsole.ATMController();
-            var actual = sut.WithDraw("john", 500);
+            var actual = sut.WithDraw(username, withdrawAmount);
             Assert.True(actual);
-
-            var expectedMoney = 0;
             Assert.Equal(expectedMoney, sut.Money);
         }
 
