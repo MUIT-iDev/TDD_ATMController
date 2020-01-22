@@ -6,9 +6,12 @@ D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMCo
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMConsoleTest.runtimeconfig.dev.json
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMConsoleTest.dll
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMConsoleTest.pdb
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMConsole.dll
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\bin\Debug\netcoreapp1.1\ATMConsole.pdb
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.csprojAssemblyReference.cache
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.csproj.CoreCompileInputs.cache
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.AssemblyInfoInputs.cache
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.AssemblyInfo.cs
+D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.csproj.CopyComplete
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.dll
 D:\visual2017WSP_NEW\TDD_ATMControl\ATMConsoleTest\obj\Debug\netcoreapp1.1\ATMConsoleTest.pdb
