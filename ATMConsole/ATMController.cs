@@ -26,6 +26,7 @@ namespace ATMConsole
             if (!isWithdrawRequestValid) return false;
 
             selectedAccount.Balance -= amount;
+            log.WriteWithdraw(username, amount);
             return isWithdrawRequestValid;
         }
 
