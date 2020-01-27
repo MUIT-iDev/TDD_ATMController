@@ -10,7 +10,8 @@ namespace ATMConsole
 
         public bool WithDraw(string username, double amount)
         {
-            var isWithdrawRequestValid = Money >= amount;
+            const int MinWithdrawAmount = 1;
+            var isWithdrawRequestValid = Money >= amount && amount >= MinWithdrawAmount;
             if (!isWithdrawRequestValid) return false;
 
             Money -= amount;
