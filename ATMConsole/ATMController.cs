@@ -8,11 +8,13 @@ namespace ATMConsole
     public class ATMController
     {
         private readonly ILogFile log;
+        private readonly IAccountDTA dta;
         public IList<Account> Accounts { get; set; }
 
-        public ATMController(ILogFile log)
+        public ATMController(ILogFile log, IAccountDTA dta)
         {
             this.log = log;
+            this.dta = dta;
         }
 
         public bool WithDraw(string username, double amount)
