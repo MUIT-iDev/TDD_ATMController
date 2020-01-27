@@ -15,7 +15,7 @@ namespace ATMConsoleTest
             sut.Accounts = new List<ATMConsole.Account>
             {
                 new ATMConsole.Account { Username = "john", Balance = 500 },
-                new ATMConsole.Account { Username = "doe", Balance = 500 },
+                new ATMConsole.Account { Username = "doe", Balance = 50 },
             };
         }
 
@@ -36,6 +36,7 @@ namespace ATMConsoleTest
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลไม่ถูกต้อง ระบบทำการแจ้งเตือน")]
         [InlineData("john", 0, 500)]
         [InlineData("john", -1, 500)]
+        [InlineData("john", 501, 500)]
         public void Test3(string username, double withdrawAmount, double expectedMoney)
         {
             var actual = sut.WithDraw(username, withdrawAmount);
@@ -47,6 +48,8 @@ namespace ATMConsoleTest
 
         [Theory(DisplayName = "ผู้ใช้ที่ไม่มีอยู่ในระบบทำการถอนเงิน ระบบไม่ยอมให้ถอนเงิน")]
         [InlineData("unknow", 100, 0)]
+        [InlineData("", 100, 0)]
+        [InlineData(null, 100, 0)]
         public void InvalidUserTryWithdrawThenSystemMustNotAcceptTheResult(string username, double withdrawAmount, double expectedMoney)
         {
             var actual = sut.WithDraw(username, withdrawAmount);
