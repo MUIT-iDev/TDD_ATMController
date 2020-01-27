@@ -15,14 +15,17 @@ namespace ATMConsoleTest
             //create moq
             var mock = new MockRepository(MockBehavior.Default);
             logMocking = mock.Create<ATMConsole.ILogFile>();
+            var dac = mock.Create<ATMConsole.IAccountDTA>();
 
             //sut = System Under Test
-            sut = new ATMConsole.ATMController(logMocking.Object);
-            sut.Accounts = new List<ATMConsole.Account>
+            sut = new ATMConsole.ATMController(logMocking.Object, dac.Object);
+            var accounts = new List<ATMConsole.Account>
             {
                 new ATMConsole.Account { Username = "john", Balance = 500 },
                 new ATMConsole.Account { Username = "doe", Balance = 50 },
             };
+            dac.Setup(o => o.GetAllAccounts())
+                .Returns(accounts);
         }
 
 

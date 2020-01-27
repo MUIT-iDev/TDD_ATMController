@@ -9,7 +9,6 @@ namespace ATMConsole
     {
         private readonly ILogFile log;
         private readonly IAccountDTA dta;
-        public IList<Account> Accounts { get; set; }
 
         public ATMController(ILogFile log, IAccountDTA dta)
         {
@@ -33,7 +32,7 @@ namespace ATMConsole
         }
 
         public Account GetAccountByUsername(string username)
-         => Accounts.FirstOrDefault(o => o.Username == username);
+         => dta.GetAllAccounts().FirstOrDefault(o => o.Username == username);
             
 
     }
