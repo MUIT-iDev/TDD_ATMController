@@ -24,7 +24,7 @@ namespace ATMConsoleTest
         [InlineData("john", 500, 0)]
         [InlineData("john", 450, 50)]
         [InlineData("john", 1, 499)]
-        public void Test1(string username, double withdrawAmount, double expectedMoney)
+        public void WithdrawWithAllDataCorrectSystemAcceptTheResult(string username, double withdrawAmount, double expectedMoney)
         {            
             var actual = sut.WithDraw(username, withdrawAmount);
             Assert.True(actual);
@@ -36,7 +36,7 @@ namespace ATMConsoleTest
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลไม่ถูกต้อง ระบบทำการแจ้งเตือน")]
         [InlineData("john", 0, 500)]
         [InlineData("john", -1, 500)]
-        public void Test3(string username, double withdrawAmount, double expectedMoney)
+        public void WithdrawWithSomeDataIncorrectSystemMustNotAcceptTheResult(string username, double withdrawAmount, double expectedMoney)
         {
             var actual = sut.WithDraw(username, withdrawAmount);
             Assert.False(actual);
@@ -60,7 +60,7 @@ namespace ATMConsoleTest
 
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ แต่เงินในบัญชีไม่พอ ระบบทำการแจ้งเตือน")]
         [InlineData("doe", 100, 50)]
-        public void Test2(string username, double withdrawAmount, double expectedMoney)
+        public void WithdrawWhenBalanceNotEnoughtThenSystemMustNotAcceptTheResult(string username, double withdrawAmount, double expectedMoney)
         {
             var actual = sut.WithDraw(username, withdrawAmount);
             Assert.False(actual);
