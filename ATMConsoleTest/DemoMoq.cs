@@ -15,6 +15,11 @@ namespace ATMConsoleTest
             var mock = new Moq.MockRepository(Moq.MockBehavior.Default);
             var logMocking = mock.Create<ATMConsole.ILogFile>();
 
+            //set action in moq method
+            var expectedDate = DateTime.Now;
+            logMocking.Setup(o => o.GetCurrentDate())
+                .Returns(expectedDate);
+
             //get object from interface
             var log = logMocking.Object;
             log.WriteWithdraw("sakul", 999);
@@ -25,6 +30,8 @@ namespace ATMConsoleTest
                     It.Is<string>(acul => acul == "sakul"), 
                     It.Is<double>(acul => acul == 999)));
 
+            var currentTime = log.GetCurrentDate();
+            Assert.Equal(expectedDate, currentTime);
         }
     }
 }
