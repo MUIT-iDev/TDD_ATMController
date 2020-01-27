@@ -1,0 +1,5 @@
+.vs/*
+ATMConsole/bin/*
+ATMConsole/obj/*
+ATMConsoleTest/bin/*
+ATMConsoleTest/obj/*

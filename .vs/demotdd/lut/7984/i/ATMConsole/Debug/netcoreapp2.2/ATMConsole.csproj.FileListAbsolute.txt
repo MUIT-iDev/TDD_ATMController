@@ -1,5 +1,0 @@
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp2.2\ATMConsole.csprojAssemblyReference.cache
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp2.2\ATMConsole.csproj.CoreCompileInputs.cache
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp2.2\ATMConsole.AssemblyInfoInputs.cache
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp2.2\ATMConsole.AssemblyInfo.cs
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp2.2\ATMConsole.dll
