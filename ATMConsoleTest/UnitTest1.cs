@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Xunit;
+using Moq;
 
 namespace ATMConsoleTest
 {
@@ -10,8 +11,12 @@ namespace ATMConsoleTest
 
         public UnitTest1()
         {
+            //create moq
+            var mock = new MockRepository(MockBehavior.Default);
+            var logMocking = mock.Create<ATMConsole.ILogFile>();
+
             //sut = System Under Test
-            sut = new ATMConsole.ATMController();
+            sut = new ATMConsole.ATMController(logMocking.Object);
             sut.Accounts = new List<ATMConsole.Account>
             {
                 new ATMConsole.Account { Username = "john", Balance = 500 },
