@@ -36,7 +36,6 @@ namespace ATMConsoleTest
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลไม่ถูกต้อง ระบบทำการแจ้งเตือน")]
         [InlineData("john", 0, 500)]
         [InlineData("john", -1, 500)]
-        [InlineData("unknow", 100, 0)]
         public void Test3(string username, double withdrawAmount, double expectedMoney)
         {
             var actual = sut.WithDraw(username, withdrawAmount);
@@ -44,6 +43,17 @@ namespace ATMConsoleTest
 
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Equal(expectedMoney, selectedAccount.Balance);
+        }
+
+        [Theory(DisplayName = "ผู้ใช้ที่ไม่มีอยู่ในระบบทำการถอนเงิน ระบบไม่ยอมให้ถอนเงิน")]
+        [InlineData("unknow", 100, 0)]
+        public void InvalidUserTryWithdrawThenSystemMustNotAcceptTheResult(string username, double withdrawAmount, double expectedMoney)
+        {
+            var actual = sut.WithDraw(username, withdrawAmount);
+            Assert.False(actual);
+
+            var selectedAccount = sut.GetAccountByUsername(username);
+            Assert.Null(selectedAccount);
         }
 
         [Fact(DisplayName = "ผู้ใช้กดเงินออกจากตู้ แต่เงินในบัญชีไม่พอ ระบบทำการแจ้งเตือน")]
