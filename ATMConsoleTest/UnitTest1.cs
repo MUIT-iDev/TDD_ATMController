@@ -21,6 +21,7 @@ namespace ATMConsoleTest
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลไม่ถูกต้อง ระบบทำการแจ้งเตือน")]
         [InlineData("john", 0, 500)]
         [InlineData("john", -1, 500)]
+        [InlineData("unknow", 100, 0)]
         public void Test3(string username, double withdrawAmount, double expectedMoney)
         {
             //sut = System Under Test
