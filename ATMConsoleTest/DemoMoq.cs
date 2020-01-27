@@ -17,19 +17,23 @@ namespace ATMConsoleTest
 
             //set action in moq method
             var expectedDate = DateTime.Now;
-            logMocking.Setup(o => o.GetCurrentDate(1))
-                .Returns(expectedDate);
-            logMocking.Setup(o => o.GetCurrentDate(2))
-                .Returns(expectedDate.AddDays(1));
+            logMocking.Setup(o => o.GetCurrentDate(It.IsAny<int>()))
+                .Returns<int>(number =>
+                {
+                    if (number == 1) return expectedDate;
+                    else if (number == 2) return expectedDate.AddDays(1);
+                    else return DateTime.Now;
+                });
+
 
             //get object from interface
             var log = logMocking.Object;
             log.WriteWithdraw("sakul", 999);
 
             //test mocking
-            logMocking.Verify(o => 
+            logMocking.Verify(o =>
                 o.WriteWithdraw(
-                    It.Is<string>(acul => acul == "sakul"), 
+                    It.Is<string>(acul => acul == "sakul"),
                     It.Is<double>(acul => acul == 999)));
 
             var currentTime = log.GetCurrentDate(1);
