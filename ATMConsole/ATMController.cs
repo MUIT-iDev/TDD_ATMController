@@ -7,7 +7,13 @@ namespace ATMConsole
 {
     public class ATMController
     {
+        private readonly ILogFile log;
         public IList<Account> Accounts { get; set; }
+
+        public ATMController(ILogFile log)
+        {
+            this.log = log;
+        }
 
         public bool WithDraw(string username, double amount)
         {
