@@ -7,3 +7,4 @@ D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcore
 D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.AssemblyInfo.cs
 D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.csproj.CopyComplete
 D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.dll
+D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.csprojAssemblyReference.cache

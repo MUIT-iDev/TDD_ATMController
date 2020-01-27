@@ -1,9 +1,0 @@
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\b\ATMConsole\Debug\netcoreapp1.1\ATMConsole.deps.json
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\b\ATMConsole\Debug\netcoreapp1.1\ATMConsole.runtimeconfig.json
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\b\ATMConsole\Debug\netcoreapp1.1\ATMConsole.runtimeconfig.dev.json
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\b\ATMConsole\Debug\netcoreapp1.1\ATMConsole.dll
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.csproj.CoreCompileInputs.cache
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.AssemblyInfoInputs.cache
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.AssemblyInfo.cs
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.csproj.CopyComplete
-D:\visual2017WSP_NEW\TDD_ATMControl\.vs\demotdd\lut\0\i\ATMConsole\Debug\netcoreapp1.1\ATMConsole.dll
