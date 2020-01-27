@@ -8,6 +8,6 @@ namespace ATMConsole
     {
         void WriteWithdraw(string username, double amount);
 
-        DateTime GetCurrentDate();
+        DateTime GetCurrentDate(int number);
     }
 }
