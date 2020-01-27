@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ATMConsole
 {
@@ -13,7 +14,9 @@ namespace ATMConsole
             var selectedAccount = GetAccountByUsername(username);
 
             const int MinWithdrawAmount = 1;
-            var isWithdrawRequestValid = selectedAccount != null && selectedAccount.Balance >= amount && amount >= MinWithdrawAmount;
+            var isWithdrawRequestValid = selectedAccount != null 
+                && selectedAccount.Balance >= amount 
+                && amount >= MinWithdrawAmount;
             if (!isWithdrawRequestValid) return false;
 
             selectedAccount.Balance -= amount;
@@ -21,14 +24,8 @@ namespace ATMConsole
         }
 
         public Account GetAccountByUsername(string username)
-        {
-            foreach (var item in Accounts)
-            {
-                if (item.Username == username) return item;
-            }
-
-            return null;
-        }
+         => Accounts.FirstOrDefault(o => o.Username == username);
+            
 
     }
 }
