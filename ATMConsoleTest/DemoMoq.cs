@@ -17,7 +17,7 @@ namespace ATMConsoleTest
 
             //get object from interface
             var log = logMocking.Object;
-            log.WriteWithdraw("sakul", 123);
+            log.WriteWithdraw("sakul", 999);
 
             //test mocking
             logMocking.Verify(o => 
