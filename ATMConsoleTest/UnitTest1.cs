@@ -55,6 +55,13 @@ namespace ATMConsoleTest
 
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Equal(expectedMoney, selectedAccount.Balance);
+
+            logMocking.Verify(log => log.WriteWithdraw
+            (
+                It.IsAny<string>(),
+                It.IsAny<double>()),
+                Times.Never()
+            );
         }
 
         [Theory(DisplayName = "ผู้ใช้ที่ไม่มีอยู่ในระบบทำการถอนเงิน ระบบไม่ยอมให้ถอนเงิน")]
@@ -68,6 +75,13 @@ namespace ATMConsoleTest
 
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Null(selectedAccount);
+
+            logMocking.Verify(log => log.WriteWithdraw
+            (
+                It.IsAny<string>(),
+                It.IsAny<double>()),
+                Times.Never()
+            );
         }
 
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ แต่เงินในบัญชีไม่พอ ระบบทำการแจ้งเตือน")]
@@ -79,6 +93,13 @@ namespace ATMConsoleTest
 
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Equal(expectedMoney, selectedAccount.Balance);
+
+            logMocking.Verify(log => log.WriteWithdraw
+            (
+                It.IsAny<string>(),
+                It.IsAny<double>()),
+                Times.Never()
+            );
         }
 
 
