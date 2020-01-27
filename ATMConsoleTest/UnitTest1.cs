@@ -8,12 +8,13 @@ namespace ATMConsoleTest
     public class UnitTest1
     {
         private ATMConsole.ATMController sut;
+        private Mock<ATMConsole.ILogFile> logMocking;
 
         public UnitTest1()
         {
             //create moq
             var mock = new MockRepository(MockBehavior.Default);
-            var logMocking = mock.Create<ATMConsole.ILogFile>();
+            logMocking = mock.Create<ATMConsole.ILogFile>();
 
             //sut = System Under Test
             sut = new ATMConsole.ATMController(logMocking.Object);
@@ -36,6 +37,12 @@ namespace ATMConsoleTest
 
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Equal(expectedMoney, selectedAccount.Balance);
+
+            logMocking.Verify(log => log.WriteWithdraw
+            (
+                It.Is<string>(acul => acul == username), 
+                It.Is<double>(acul => acul == withdrawAmount))
+            );
         }
 
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลไม่ถูกต้อง ระบบทำการแจ้งเตือน")]
