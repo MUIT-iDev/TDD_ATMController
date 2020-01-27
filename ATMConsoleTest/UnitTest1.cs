@@ -68,5 +68,16 @@ namespace ATMConsoleTest
             var selectedAccount = sut.GetAccountByUsername(username);
             Assert.Equal(expectedMoney, selectedAccount.Balance);
         }
+
+
+        //Normal cases
+        //3.ผู้ใช้กดเงินออกจากตู้ข้อมูลถูกต้อง แต่ตู้มีเงินไม่พอจ่าย ระบบทำการแจ้งเตือน
+
+        //Alternative cases
+        //4.ผู้ใช้บัญชีพิเศษกดเงินมากกว่าที่มีในบัญชี ระบบบันทึกเครดิตแล้วนำเงินออกมา
+        //5.ผู้ใช้บัญชีพิเศษกดเงินมากกว่าที่มีในบัญชี แต่เครดิตเต็มแล้ว ระบบทำการแจ้งเตือน
+
+        //Exception cases
+        //6.ผู้ใช้ถอนเงินสำเร็จแต่ระบบไม่สามารถตัดเงินออกจากบัญชีได้ ระบบทำการแจ้งเตือน
     }
 }
