@@ -1,18 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace ATMConsoleTest
 {
     public class UnitTest1
     {
+        private ATMConsole.ATMController sut;
+
+        public UnitTest1()
+        {
+            //sut = System Under Test
+            sut = new ATMConsole.ATMController();
+            sut.Accounts = new List<ATMConsole.Account>
+            {
+                new ATMConsole.Account { Username = "john", Balance = 500 },
+                new ATMConsole.Account { Username = "doe", Balance = 500 },
+            };
+        }
+
+
         [Theory(DisplayName = "ผู้ใช้กดเงินออกจากตู้ ข้อมูลถูกต้อง ระบบทำการหักเงินแล้วนำเงินออกมา")]
         [InlineData("john", 500, 0)]
         [InlineData("john", 450, 50)]
         [InlineData("john", 1, 499)]
         public void Test1(string username, double withdrawAmount, double expectedMoney)
-        {
-            //sut = System Under Test
-            var sut = new ATMConsole.ATMController();
+        {            
             var actual = sut.WithDraw(username, withdrawAmount);
             Assert.True(actual);
 
@@ -26,8 +39,6 @@ namespace ATMConsoleTest
         [InlineData("unknow", 100, 0)]
         public void Test3(string username, double withdrawAmount, double expectedMoney)
         {
-            //sut = System Under Test
-            var sut = new ATMConsole.ATMController();
             var actual = sut.WithDraw(username, withdrawAmount);
             Assert.False(actual);
 
